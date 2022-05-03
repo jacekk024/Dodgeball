@@ -30,5 +30,6 @@
 
 ## Results 
 
-Compare results with Numpy library 
+Simple game, created in Unity, contains first person player, basics physics,
+
 
