@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
 
-    float throwForce = 600f;
+    public float throwForce = 600f;
     Vector3 objectPosition;
     float distance;
 
@@ -15,13 +15,12 @@ public class PickUp : MonoBehaviour
     public GameObject tempParent;
     public bool isHolding = false;
 
-    // Start is called before the first frame update
+
 
 
     // Update is called once per frame
     void Update()
     {
-
         distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
         if (distance >= 3f) { //sprawdzanie odleglosci od przedmiotu
             isHolding = false;
@@ -29,7 +28,6 @@ public class PickUp : MonoBehaviour
 
         if (isHolding == true)// sprawdzenie czy przycisk jest przytrzymany
         {
-
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             item.transform.SetParent(tempParent.transform);
@@ -56,6 +54,10 @@ public class PickUp : MonoBehaviour
     {
         if (distance <= 3f) //sprawdzanie odleglosci od przedmiotu
         {
+            // dodanie trajektori
+
+
+
             isHolding = true;
             item.GetComponent<Rigidbody>().useGravity = false;
             item.GetComponent<Rigidbody>().detectCollisions = true;
@@ -68,4 +70,8 @@ public class PickUp : MonoBehaviour
     }
 
 
+   
 }
+
+
+
