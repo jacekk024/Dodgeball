@@ -24,9 +24,6 @@ Simple first-person game, created in Unity, contains throwing ball, driving car 
 
 ## Description
 
-
-Game was created 
-
 Project contains simple mechanics for first-person game which can be used for VR applications.
 
 In game has been implemented:
